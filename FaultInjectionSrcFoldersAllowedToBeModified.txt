@@ -1,0 +1,61 @@
+#/////////////////////////////////////////////////////////////////////////////
+#/// @file FaultInjectionSrcFoldersAllowedToBeModified.txt
+#///
+#/// This text file contains a list of all of the folders that contain all of
+#/// the source code files that all of the fault injection script files are
+#/// allowed to modify.
+#///
+#/// This text file allows the fault injection scripts to run faster since
+#/// only the listed folders need to be searched for the files to modify
+#/// instead of having to search all of the folders in the entire view/VOB.
+#///
+#/// All of the developers of the fault injection script files need to confirm
+#/// that this file includes all of the folders that contain all of the files
+#/// that their script files specify to be modified and add any such folders
+#/// that are not already included in this file.
+#///
+#/// This text file is read and processed by the faultInjectionUtils.py script
+#/// file. If faultInjectionUtils.py does not find a file that a fault
+#/// injection script file specifies to be modified in one of the folders
+#/// listed in this file, it will fault and print an error message.
+#///
+#/// If a file path includes a product name and is product-specific, put percent
+#/// signs around the product name inside the path. The framework will recognize
+#/// whether or not it should edit a file in that folder. This resolves the issue
+#/// of having duplicate filenames between separate product-specific folders.
+#///
+#/// #########################################################################
+#/// IMPORTANT NOTE: All of the folders in this file are to be listed in
+#/// alphabetical order for easy merging.
+#/// #########################################################################
+#///
+#/// @if REVISION_HISTORY_INCLUDED
+#/// @par Edit History
+#/// wmpeloso 07-OCT-2013 Created.
+#/// wmpeloso 13-OCT-2013 Updated per Collaborator code review #26377.
+#/// pszramo  04-NOV-2013 Added folders required by Flash Memory Hash tests.
+#/// pszramo  06-NOV-2013 Added folders required by delayed (run-time) tests.
+#/// abritto  06-NOV-2013 Added include paths for VMS related diagnostics.
+#/// abritto  18-DEC-2013 Updates for handling product-specific files.
+#/// dtstalte 25-JUN-2014 Add Hypervisor path for power up completion test.
+#/// @endif
+#///
+#/// @par Copyright (c) 2014 Rockwell Automation Technologies, Inc.  All rights reserved.
+#///
+#/////////////////////////////////////////////////////////////////////////////
+#
+#\LNX\Logix\Engine\Subsystems\Apex
+#\LNX\NetLinxUCS\NcsSrc\CommPorts\Backplane\Apex
+#\LNX\NetLinxUCS\NcsSrc\Diagnostic\ICE2
+#\LNX\NetLinxUCS\Proj_ICE2_%CNz%R_VIP
+#\LNX\NetLinxUCS\Proj_ICE2_%ENzTR%_VIP
+#\LNX\Platform\BSP\Chip\Ice2
+#\LNX\Platform\Common\Diagnostics\ICE2
+#\LNX\Platform\Common\Diagnostics\ICE2\Tests
+#\LNX\Platform\Common\Diagnostics\ICE2\Hypervisor
+#\LNX\Platform\Common\Diagnostics\ICE2\VxWorks
+#\LNX\Platform\Hypervisor\2.0\bsp\ice2\lib
+#\LNX\Platform\NetLinxUCS\BSP\ICE2\RaSupport
+
+\Blackfin\Common\Diag
+
